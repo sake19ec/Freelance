@@ -2,25 +2,21 @@
 html{
     box-sizing: border-box;
     scroll-behavior: smooth;
+    
 }
 a{
     text-decoration: none;
+
 }
 body{
-    background-color: #171717;
-    color: white;
+    background-color:rgb(46, 44, 44);
+    color: whitesmoke;
 }
 .container{
     display: grid;
     grid-template-areas: "header" "main" "footer";
     grid-template-columns: 100%;
     height: 100%;
-}
-.gola{
-    border:gray 0.5px;
-    border-radius: 15px;
-    background-color: gray;
-    width:5px;
 }
 /* header styles*/
 header{
@@ -29,34 +25,24 @@ header{
     z-index: 1000;
 }
 .header{
-    /* grid-area: header;
+    grid-area: header;
     display: flex;
     position: fixed;
     flex-direction: row;
     justify-content: space-between;
     background-color: #3d3d3d;
-    color: white;
+    color: rgb(194, 160, 11);
     margin-top: -0.58%;
-    width: 100%;
+    width: 99%;
     height: 9vh;
-    box-shadow: whitesmoke 2px 1px 5px;
-    padding-bottom: 35px; */
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border-bottom: 	#D4AF37    2px solid;
-
-}
-.searcher{
-    height:2.8em;
+    box-shadow:rgb(218, 189, 28),2px 1px 5px;
+    
 }
 
 .header #header-img{
     display: flex;
     margin: 0 5.1rem;
-    cursor: pointer;   
-    margin-top: 3px; 
+    cursor: pointer;    
 }
 #header-img img{
     height: 76px;
@@ -66,29 +52,23 @@ header{
 .header .search-header{
     display: flex;
     flex-direction: row;
-    width: 28%;
+    width: 22%;
     justify-content: space-between;
     align-items: center;
     background-color: #555;
     border-radius: 30px;
-    height: 85%;
+    height: 60%;
     align-self: center;
-    color: #e0dddd;
 }
-.header input,.fa-caret-down,.fa{
+.header input,.fa.fa-search{
     color:white !important;
     margin-right: .3rem ;
     cursor: pointer;
 }
 
-
 .fa.fa-bars{
     align-self: center;
-    /* margin-right: .2rem; */
-    background-color: #D4AF37;
-    /* opacity: 10%; */
-
-    
+    margin-right: .3rem;
 }
 .search-header input{
     width: 120%;
@@ -110,6 +90,7 @@ header{
 }
 .login-icons div{
     cursor: pointer;
+    
 }
 
 .tooltip{
@@ -182,7 +163,7 @@ header{
     padding-right: 0;
     border-radius: 5px;
     margin: 0;
-    box-shadow: #f1f1f1 2px 2px 3px ;
+    box-shadow: #f1f1ee 2px 2px 3px ;
 }
 .user-icon-tooltip div{
     transition: all .3s ;
@@ -199,7 +180,7 @@ header{
     width: 32px !important;
 }
 .user-icon-tooltip div a{
-    color: #000;
+    color:black;
     text-align: left;
 }
 .user-icon-tooltip div:hover{
@@ -250,16 +231,15 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #D4AF37;
+    background-color: #e0b118;
     width: 30%;
-    height: 43%;
+    height: 52%;
     text-align: center;
-    border-radius: 25px;
+    border-radius: 15px;
     align-self: center;
-    
 }
 #login-button:hover{
-    background: linear-gradient(0deg,rgba(0,0,0,0.06),rgba(0,0,0,0.06));
+    background: linear-gradient(0deg,rgba(0,0,0,0.06),rgba(0,0,0,0.06)),#fe2c55;
 }
 #no-email-post-video{
     align-self: center;
@@ -294,6 +274,7 @@ main{
     flex-direction: column;
     transition: ease-in-out .1s;
     height:100%;
+    color: rgb(230, 194, 36);
 }
 .login-now{
     grid-area: login-now;
@@ -301,10 +282,10 @@ main{
     font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.3rem;
     cursor: pointer;
-    color: white;
+    color:rgb(247, 245, 240);
+    height: 100%;
     padding-bottom: 0rem;
-    margin-top: 3rem;
-       
+    margin-top: 1rem;
 }
 
 /*video style*/
@@ -314,7 +295,7 @@ main{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 10%;
+    height: 10jjh%;
 }
 .video-maker button{
     width: 10%;
@@ -348,6 +329,7 @@ main{
 }
 .vids{
     padding: 0rem 0;
+    border-top: #3d3d3d    2px solid;
     border-bottom: #3d3d3d    2px solid;
     height: 100%;
     display: flex;
@@ -363,6 +345,7 @@ main{
     height:100%;
     justify-self: center;
     align-self: center;
+    
 }
 .video .profile h5{
     font-size: 3rem;
@@ -382,7 +365,7 @@ main{
     cursor: pointer;
 }
 .red-heart{
-    color: #ff4848;
+    color: rgb(218, 77, 22);
 }
 .follow-and-category{
     width: 100%;
@@ -404,10 +387,11 @@ main{
     height: 82h;
     overflow-y: scroll;
     text-align: center;
-    border-left: #777070 2px solid;
+    border-left: rgb(209, 206, 10) 2px solid;
     padding-left: .3rem;
     
 }
+
 .add-comment{
     position: absolute;
     width: 19.5%;
@@ -427,7 +411,7 @@ main{
     height: 22px;
 }
 .add-comment .fa-send{
-    color: #fff;
+    color: rgb(250, 249, 245);
     height: 100%;
     font-size: 1.2rem;
     cursor: pointer;
@@ -483,7 +467,7 @@ main{
 .single-comment{
     border-bottom: #3d3d3d 2px solid;
     margin: 2rem 1rem;
-    box-shadow: #FFFFff 2px 2px 3px ;
+    box-shadow: #f7f6f4 2px 2px 3px ;
     display: flex;
     flex-direction: column;
 
@@ -544,7 +528,7 @@ main{
     vertical-align: middle;
     border-bottom: none !important;
     border-right: #646363 2px solid;
-    color: #004992;
+    color: #0b0ed4;
 }
 /*google login button */
 .google-connect{
@@ -917,7 +901,7 @@ main{
     transition: ease-in-out .3s;
 }
 .hide-signup-login-menu:hover{
-    color: rgb(211, 26, 26);
+    color: rgb(201, 28, 22);
     
 }
 /*---------------- Sign Up -----------------*/
@@ -933,7 +917,7 @@ main{
     display: flex;
     flex-direction: column;
     height: 87.3vh;
-    margin-top: 2.9rem;
+    margin-top: 1rem;
     align-items: center;
 }
 .upload *{
@@ -952,19 +936,18 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 55vh;
-    margin-right: 1.7rem;
+    min-width: 35vh;
+    margin-right: 1rem;
 }
 
 .upload-video-title{
-    margin-left: 3em;
-    
-}
+    grid-area: title;
 
+}
 .upload h1{
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-bottom: 0px;
+    margin: 0;
 }
 .upload-elements{
     grid-area: form;
@@ -976,7 +959,6 @@ main{
     height: 100%;
     width: 100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
 }
 .upload-elements div{
     width: 100%;
@@ -985,32 +967,30 @@ main{
 }
 .upload-elements div input[type="text"],.upload-elements div textarea{
     transition: .4s ease-in-out;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 .upload-elements div input[type="text"]:focus,.upload-elements div textarea:focus{
     box-shadow: #cfcfcf 2px 2px 2px;
 }
 .upload-elements h3{
     font-size: 1.5rem;
-    color:gray;
 }
 .upload-elements .title{
     width: 75%;
     height: 50px;
-    
 }
 .upload-elements .description{
     width: 75%;
-    height: 150px;
-    border-radius: 20px;
+    height: 100px;
+    border-radius: 4px;
 }
 .upload-elements .title{
-    border-radius: 20px;
+    border-radius: 4px;
 }
 .dropzone{
-    height: 65%;
-    width: 65%;
-    /* max-width: 31vh; */
+    height: 95%;
+    width: 55%;
+    max-width: 31vh;
     border-radius: 3px;
     background-color: #f7f2f2;
     color: #777070;
@@ -1019,7 +999,6 @@ main{
     justify-content: center;
     align-items: center;
     transition: .3s ease-in-out;
-    border-radius: 10px;
 }
 .dropzone:hover{
     background: linear-gradient(0deg,rgba(0,0,0,0.06),rgba(0,0,0,0.06)),#f1f1f1;
@@ -1034,8 +1013,8 @@ main{
     text-align: left;
 }
 .dropzone img{
-    height: 70px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
 }
 .dropzone p{
     text-align: center;
@@ -1045,18 +1024,16 @@ main{
     background-color: rgb(231, 231, 231);
 }
 .vidCateg{
-    /* display: grid !important;
-    grid-template-columns: auto auto auto auto;
-    grid-gap: 1px; */
     display: grid !important;
-  grid-template-columns: 0.15fr 0.15fr 0.15fr;
-  grid-gap: 3px;
-    
-    
+    grid-template-columns: 1fr 1fr 1fr;
 }
 .vidCateg div{
     display: flex;
     flex-direction: row;
+}
+.vidCateg {
+    justify-content: space-between;
+    width: 50%;
 }
 .vidCateg input{
     height: 90%;
@@ -1066,8 +1043,6 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding-top: 2em;
-    
 }
 .upload-buttons button{
     height: 2rem;
@@ -1076,21 +1051,16 @@ main{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 1rem;
     transition: ease-in-out .2s;
-    border-radius: 17px;
-    
 }
 .cancel-post:hover{
     color: #FFFFff;
     background-color: #ff4848;
     border: #ff4848 2px solid;
 }
-.confirm-post{
-    background-color: gray;
-}
 .confirm-post:hover{
     color: #FFFFff;
-    background-color: #D4AF37;
-    border: #004992 2px solid;
+    background-color: #1107a0;
+    border: #1408b8 2px solid;
 }
 .disactivated-confirm-post{
     background-color: #f3f3f3;
@@ -1380,7 +1350,7 @@ main{
     background-color: #3d3d3d;
 }
 .profile-video-bar div{
-    background-color: #e4e4e4;
+    background-color: #f7f7f3;
     height: 2px;
     width: 50%;
     transition: .3s ease-in-out;
@@ -1416,6 +1386,8 @@ main{
     font-size: larger;
     min-width: fit-content;
 }
+
+
 .no-liked-videos i{
     color: #f1f1f1;
     font-size: 120px;
@@ -1436,7 +1408,7 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    border-top: #3d3d3d 2px solid;
+    border-top: #d6c90f 2px solid;
 }
 footer a{
     color: #004992;

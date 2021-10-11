@@ -88,10 +88,10 @@ export default function UploadVideoScreen() {
         <div className="upload">
             <div className="upload-fields">
                 <div className="upload-video-title">
-                    <p style={{fontSize:"30px"}}>Upload a video</p>
-                    <p style={{color: "gray"}}>This video will be uploaded to @{userLogin.username}</p>
+                    <h1>Upload a video</h1>
+                    <span>This video will be uploaded to @{userLogin.username}</span>
                 </div>
-                <div className="upload-file-field" style={{marginTop:"-110px"}}>
+                <div className="upload-file-field">
                     {videoPath!==undefined?(
                         <div className="uploaded-video" onLoadedData={HandleLoad}>
                             <Player
@@ -112,7 +112,7 @@ export default function UploadVideoScreen() {
                         styles={buildStyles({
                             strokeLinecap: "butt"
                         })}
-                        strokeWidth={7}
+                        strokeWidth={5}
                         />
                             <span onClick={abortUpload} className="abort-upload-button"><img src="https://sf16-scmcdn-sg.ibytedtos.com/goofy/tiktok/web/node/_next/static/images/close-54baafc270c3e8ba4db7a0f5dbc9f9d3.svg"/></span>
                         <p>{video.name}</p>
@@ -159,19 +159,14 @@ export default function UploadVideoScreen() {
                 <form className="upload-elements">
                     <div>
                         <h3>Caption</h3>
-                        <input className="title" type="text" placeholder="    Title" onChange={e=>setTitle(e.target.value)}required/>
+                        <input className="title" type="text" placeholder="title" onChange={e=>setTitle(e.target.value)}required/>
                     </div>
                     <div>
                         <h3>Cover</h3>
-                        <textarea className="description" placeholder="   Description" onChange={e=>setDescription(e.target.value)}required></textarea>
+                        <textarea className="description" placeholder="description" onChange={e=>setDescription(e.target.value)}required></textarea>
                     </div>
-                        <h3>Select Category</h3>
-                        <div>
-                        <div className="gola">Sports</div><div className="gola">Comedy</div><div className="gola">Fantasy</div><div className="gola">Drama</div><div className="gola">Science</div>
-                    </div>
-                   <div style={{display:"flex", flexDirection:"row"}}>
                     <div>
-                        <h3>Who can see this video</h3>
+                        <h3>who can see this video</h3>
                         <div className="vidCateg" onChange={e=>setVisibility(e.target.value)}>  
                             <div>
                                 <h4>Public</h4>
@@ -187,40 +182,14 @@ export default function UploadVideoScreen() {
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <h3>Allow users to </h3>
-                        <div>
-                        <div className="vidCateg" onChange={e=>setVisibility(e.target.value)}>  
-                            <div>
-                                <input type="checkbox" name="visibility" value="Comment"required/>
-                                <h4>Comment</h4>
-                            </div>
-                            <div>
-                                
-                                <input type="checkbox" name="visibility" value="Duet"required/>
-                                <h4>Duet</h4>
-                            </div>
-                            <div>
-                               
-                                <input type="checkbox" name="visibility" value="Stich"required/> 
-                                <h4>Stich</h4>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                  
                 </form>
-
-                <div className="upload-buttons" style={{paddingBottom:"40px"}}>
+                <div className="upload-buttons">
                     <Link to="/">
-                            <button className="cancel-post" style={{backgroundColor: "#D4AF37", color:"white"}}>Discard</button>
+                            <button className="cancel-post">Discard</button>
                     </Link>
-                    <button className={conditionToPost?"confirm-post":"disactivated-confirm-post"}  onClick={(e)=>uploadVid(e)} >Post</button>
+                    <button className={conditionToPost?"confirm-post":"disactivated-confirm-post"} onClick={(e)=>uploadVid(e)} >Post</button>
                 </div>
-                
             </div>
-           
         </div>
         )
 }

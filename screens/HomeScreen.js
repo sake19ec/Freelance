@@ -16,7 +16,7 @@ export default function HomeScreen() {
         <>
         {loading?<LoadingBox/>:
         <div className="home-page">
-          
+          <div className="login-now">Login to show the world  your talents! </div>
             <VidsComponent videos={payload}/>
          </div>
         }
