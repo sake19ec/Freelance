@@ -28,7 +28,7 @@ export default function Header() {
         <div className="header">
             <Link  to="/" id="header-img" ><img src="/2A-half-border-transparent.png" alt="13k13"/></Link>
             <div className="search-header">
-                <input type="text" placeholder="Search All" className="searcher" /><p></p><i className="fa fa-caret-down"></i>
+                <input type="text" placeholder="search accounts"/><p></p><i className="fa fa-search fa-2x"></i>
             </div>
             {userLogin.id?
             (
@@ -86,7 +86,7 @@ export default function Header() {
                     Upload
             </Link>
             <Link id="login-button" onClick={()=>setToggleLogin(!toggleLogin)}>
-                Login
+                Log in
             </Link>
             <i className="fa fa-bars fa-3x"></i>
             </div>
@@ -98,5 +98,3 @@ export default function Header() {
         </div>
     )
 }
-
-// #D4AF37

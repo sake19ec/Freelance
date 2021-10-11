@@ -52,53 +52,9 @@ export default function VidsComponent({videos=[{}]}) {
         return data;
     }
     return (
-        <div>
-            <div className="login-now">
-                <p>Login to show the world  your talents </p>
-                </div>
         <div className="vids">
-            <Swiper
-                spaceBetween={20}
-                slidesPerView="auto"
-                navigation={true}
-                className="swiper"
-            >
-            {
-                videos.length>0&&videos.map(item=>(
-                   <SwiperSlide>
-                    {({ isActive }) => {
-                        setTimeout(() => {
-                            if(isActive){
-                                setI(item.id);
-                            }
-                        }, 100);
-                        return <Video vid={item} playVid={isActive}/>
-                    }}
-                     
-                    </SwiperSlide> 
-                ))
-            }
-             </Swiper>
-             <div className="comments">
-                <h1><i className="fa fa-comment fa-2x"></i></h1>
-                <div className="all-comments">
-                    {handleVideoComments(i)}
-                </div>
 
-                <div className="add-comment">
-                    <div className="toggle-add-comment" onClick={()=>setShowAddComment(!showAddComment)}>
-                        <i className={`fa fa-${showAddComment?'close':'plus'}`}></i>
-                    </div>
-                    {showAddComment&&(
-                        <>
-                        <input type="text" placeholder="add a comment here!" autoFocus value={commentText} onKeyPress={e=>handleKeyPress(e)} onChange={e=>setCommentText(e.target.value)}/>
-                        <i className="fa fa-send" onClick={comment}></i>
-                        </>
-                    )}
-                </div>
-
-        </div>
-            <div className="before-footer">
+<div className="before-footer">
                  <BeforeFooter title="Trending">
               <table>
                 <tr>
@@ -257,6 +213,49 @@ export default function VidsComponent({videos=[{}]}) {
             </BeforeFooter>
             </div>
 
-        </div></div>
+            <Swiper
+                spaceBetween={20}
+                slidesPerView="auto"
+                navigation={true}
+                className="swiper"
+            >
+            {
+                videos.length>0&&videos.map(item=>(
+                   <SwiperSlide>
+                    {({ isActive }) => {
+                        setTimeout(() => {
+                            if(isActive){
+                                setI(item.id);
+                            }
+                        }, 100);
+                        return <Video vid={item} playVid={isActive}/>
+                    }}
+                     
+                    </SwiperSlide> 
+                ))
+            }
+             </Swiper>
+             <div className="comments">
+                <h1><i className="fa fa-comment fa-2x"></i></h1>
+                <div className="all-comments">
+                    {handleVideoComments(i)}
+                </div>
+
+                <div className="add-comment">
+                    <div className="toggle-add-comment" onClick={()=>setShowAddComment(!showAddComment)}>
+                        <i className={`fa fa-${showAddComment?'close':'plus'}`}></i>
+                    </div>
+                    {showAddComment&&(
+                        <>
+                        <input type="text" placeholder="add a comment here!" autoFocus value={commentText} onKeyPress={e=>handleKeyPress(e)} onChange={e=>setCommentText(e.target.value)}/>
+                        <i className="fa fa-send" onClick={comment}></i>
+                        </>
+                    )}
+                </div>
+
+        </div>
+            
+
+        </div>
     )
 }
